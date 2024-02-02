@@ -1,16 +1,20 @@
 body {
   max-width: 1200px;
-  min-width: 600px;
-  margin: 20px auto 0 auto;
+  margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
 }
 
 .top_bar {
-  margin-left: 10px;
-  margin-right: 10px;
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #5DADE2;
+  color: #fff;
 }
+
 
 @media (max-width: 1024px) {
   .top_bar {
@@ -32,43 +36,59 @@ h1 {
 
 
 
-.top_bar .search {
-  flex-basis: 360px;
-  flex-shrink: 0;
-  flex-grow: 1;
+.search input {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  transition: border-color 0.3s;
 }
 
-.search input, .search button{
-  font-size: 20px;
-  border-radius: 4px;
-  padding: 8px 16px;
-  box-shadow: none;
+.search input:focus {
+  border-color: #85929E;
 }
 
 .search button {
-  color: white;
-  background-color: #BFA006;
-  border: 0px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #85929E;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search button:hover {
+  background-color: #85929E;
 }
 
 .suggestions h3 {
-  font-size: small;
+  font-size: 1rem;
   text-transform: uppercase;
+  color: #717D7E ;
+  margin: 20px 0;
 }
 
 .suggestions ul {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 0 4px 0;
   padding: 0;
+  list-style-type: none;
 }
 
-.suggestions li {
-  display: block;
-  border: 1px solid gray;
-  border-radius: 3px;
-  margin: 4px;
-  padding: 4px;
+.suggestions li button {
+  background-color: #717D7E ;
+  margin: 5px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.suggestions li button:hover {
+  background-color: #717D7E ;
 }
 
 #results {
